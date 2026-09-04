@@ -1,0 +1,31 @@
+Anderson@LAPTOP-S1VEHFIL MINGW64 ~/Downloads/proyectos/Sistema_San_Rafael (main)
+$ git log --oneline --graph
+* f7b0a08 (HEAD -> main, tag: v1.0.0, origin/main, origin/HEAD) docs: release v1.0.0 - estabilidad final, suite de tests y estandares profesionales
+* 7372ec8 (tag: v0.4.0) test/refactor: finalizar integración, refinamiento y suite de pruebas
+* 887bfed feat: implementar menús de administración e integración principal
+* 842b53c feat: desarrollar controlador de reportes administrativos
+* 42fc937 (tag: v0.3.0) feat: implementar menu de farmacia y logica de facturacion
+* 24ad0e5 feat: implementar controladores de farmacia y facturación
+* d8cb5f4 feat: crear modelos de farmacia y facturacion con soporte para lotes
+* 45acfcb (tag: v0.2.0) feat: implementar interfaces de usuario para Gestión Clínica
+* c405e2a feat: implementar lógica de negocio para gestión clínica
+* 0a43552 feat: implementar modelos de gestión clínica (#3)
+* 681a9d1 (tag: v0.1.0) feat: implementar menú RRHH y refactorizar rutas de importación
+* 7268e33 feat: desarrollar componentes de mensajes, inputs y tablas en el modulo view
+* 81e95e4 feat: desarrollar el controlador del personal
+* f1ca969 refactor: corregir tipado de Pylance y errores de consistencia
+*   d092bbc feat: crear clase departamento
+|\
+| * 1f81b10 feat: crear clase departamento
+|/
+* 5d85a26 feat: crear clase contrato
+* 3c08624 feat: crear clase personal que hereda de persona
+* 0749e84 feat: crear clase abstracta Persona como base del modelo
+* d304a3b feat: desarrollar funciones auxiliares del sistema
+* acc0d77 feat: desarrollar lógica de persistencia basada en JSON
+* 3314e9e feat: implementar validaciones generales de integridad de datos
+* 81ef959 feat: implementar excepciones personalizadas para el manejo de errores
+* 5ec4952 Definir constantes de configuracion del sistema
+* 4b8697e Estructura del proyecto creada
+* 78401d9 Descripcion del proyecto
+* c80ea03 Initial commit
