@@ -1,4 +1,26 @@
-# 🔧 Git & GitHub — Flujo de trabajo
+## 📊 Git & GitHub — Nivel de dominio
+
+### 🟢 Básico
+`init` `add` `commit` `status` `log` `diff` — flujo local de control de versiones
+`branch` `switch` `merge` — manejo de ramas
+`clone` `push` `pull` `fetch` `remote` — colaboración con GitHub
+`.gitignore` — control de archivos ignorados
+
+### 🟡 Intermedio
+`stash` `cherry-pick` `tag` `reflog` — herramientas de gestión de trabajo
+Resolución de conflictos de merge, alias personalizados (`git config alias`)
+Pull Requests, Forks, Issues, Labels, Milestones — flujo de colaboración en GitHub
+Autenticación con Personal Access Token (PAT)
+
+### 🔴 Avanzado
+`rebase` (actualización e interactivo) — reescritura de historial
+`bisect` — debugging por búsqueda binaria sobre commits
+`hooks` (`pre-commit`, `commit-msg`, `pre-push`) — automatización de eventos
+`submodules` — repositorios anidados
+GitFlow vs. GitHub Flow — diseño de flujos de trabajo en equipo
+
+
+# 🔧 Flujo de trabajo
 
 ## Sistema San Rafael (proyecto propio, repo privado)
 Sistema de gestión hospitalaria simulado (Python, POO, persistencia JSON) 
