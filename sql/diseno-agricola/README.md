@@ -17,6 +17,7 @@ Modelo propio de base de datos relacional para un negocio agrícola real
 | [`diagrama-relacional.png`](./diagrama-relacional.png) | Tablas con PK/FK definidas |
 | [`schema.sql`](./schema.sql) | DDL completo, probado en PostgreSQL |
 | [`seed.sql`](./seed.sql) | Datos de prueba (variados: distintos estados, fechas, tipos de cliente) |
+| [`queries.sql`](./queries.sql) | Consultas complejas: JOINs, subconsultas correlacionadas, agregaciones anidadas |
 
 ## 🧠 Decisiones de diseño
 
