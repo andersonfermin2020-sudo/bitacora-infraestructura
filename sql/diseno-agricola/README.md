@@ -16,6 +16,7 @@ Modelo propio de base de datos relacional para un negocio agrícola real
 | [`der.png`](./der.png) | Diagrama conceptual (entidades y relaciones) |
 | [`diagrama-relacional.png`](./diagrama-relacional.png) | Tablas con PK/FK definidas |
 | [`schema.sql`](./schema.sql) | DDL completo, probado en PostgreSQL |
+| [`seed.sql`](./seed.sql) | Datos de prueba (variados: distintos estados, fechas, tipos de cliente) |
 
 ## 🧠 Decisiones de diseño
 
