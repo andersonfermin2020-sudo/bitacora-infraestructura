@@ -1,0 +1,156 @@
+R3-SV#show running-config
+Building configuration...
+
+Current configuration : 2014 bytes
+!
+! No configuration change since last restart
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec localtime show-timezone
+!
+hostname R3-SV
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+!
+no aaa new-model
+clock timezone VET -4 0
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description Origen de syslog y gestion
+ ip address 10.255.0.3 255.255.255.255
+!
+interface FastEthernet0/0
+ description WAN-R3-TO-R1
+ ip address 10.0.13.2 255.255.255.252
+ duplex full
+!
+interface Serial1/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/4
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/5
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/6
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/7
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface FastEthernet2/0
+ description WAN-R3-TO-R2
+ ip address 10.0.23.2 255.255.255.252
+ duplex full
+!
+interface FastEthernet3/0
+ description Enlace a SW3 y servidor syslog
+ ip address 192.168.100.1 255.255.255.0
+ duplex full
+!
+router rip
+ version 2
+ passive-interface FastEthernet3/0
+ passive-interface Loopback0
+ network 10.0.0.0
+ network 192.168.100.0
+ no auto-summary
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+logging trap notifications
+logging source-interface Loopback0
+logging host 192.168.100.11
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login
+!
+ntp master 3
+!
+end
+
+R3-SV#

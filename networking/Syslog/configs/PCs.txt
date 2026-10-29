@@ -1,0 +1,56 @@
+PC1-Vlan10> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 192.168.10.15/24
+GATEWAY     : 192.168.10.1
+DNS         :
+MAC         : 00:50:79:66:68:04
+LPORT       : 10016
+RHOST:PORT  : 127.0.0.1:10017
+MTU:        : 1500
+
+PC2-Vlan20> show ip
+
+NAME        : PC2-Vlan20[1]
+IP/MASK     : 192.168.20.2/24
+GATEWAY     : 192.168.20.1
+DNS         :
+MAC         : 00:50:79:66:68:00
+LPORT       : 10008
+RHOST:PORT  : 127.0.0.1:10009
+MTU:        : 1500
+
+PC1 : 192.168.30.3 255.255.255.0 gateway 192.168.30.1
+
+PC3-Vlan30> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 192.168.30.3/24
+GATEWAY     : 192.168.30.1
+DNS         :
+MAC         : 00:50:79:66:68:02
+LPORT       : 10012
+RHOST:PORT  : 127.0.0.1:10013
+MTU:        : 1500
+
+PC4-Vlan40> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 192.168.40.3/24
+GATEWAY     : 192.168.40.1
+DNS         :
+MAC         : 00:50:79:66:68:03
+LPORT       : 10014
+RHOST:PORT  : 127.0.0.1:10015
+MTU:        : 1500
+
+PC5-Vlan50> show ip
+
+NAME        : PC5-Vlan50[1]
+IP/MASK     : 192.168.50.2/24
+GATEWAY     : 192.168.50.1
+DNS         :
+MAC         : 00:50:79:66:68:01
+LPORT       : 10010
+RHOST:PORT  : 127.0.0.1:10011
+MTU:        : 1500

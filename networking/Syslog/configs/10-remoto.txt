@@ -1,0 +1,6 @@
+template(name="LogsRemotos" type="string" string="/var/log/remoto/%fromhost-ip%.log")
+
+if ($fromhost-ip != "127.0.0.1") then {
+    action(type="omfile" dynaFile="LogsRemotos")
+    stop
+}
