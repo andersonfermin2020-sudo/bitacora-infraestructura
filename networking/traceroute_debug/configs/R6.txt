@@ -1,0 +1,143 @@
+R6#show running-config
+Building configuration...
+
+Current configuration : 1638 bytes
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R6
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description RED-LAN
+ ip address 192.168.30.1 255.255.255.0
+ duplex full
+!
+interface Serial1/0
+ description WAN-R6-TO-R4
+ ip address 10.0.0.26 255.255.255.252
+ serial restart-delay 0
+!
+interface Serial1/1
+ description WAN-R6-TO-R5
+ ip address 10.0.0.30 255.255.255.252
+ serial restart-delay 0
+!
+interface Serial1/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/4
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/5
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/6
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial1/7
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+!
+interface FastEthernet3/0
+ no ip address
+ shutdown
+ duplex full
+!
+router rip
+ version 2
+ passive-interface FastEthernet0/0
+ network 10.0.0.0
+ network 192.168.30.0
+ no auto-summary
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+end
+
+R6#
